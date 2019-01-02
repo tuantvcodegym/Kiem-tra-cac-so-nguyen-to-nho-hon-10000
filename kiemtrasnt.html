@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so nguyen to</title>
+</head>
+<body>
+    <script>
+        var a = true;
+        var n = prompt("nhap vao so can kiem tra");
+        function kiemTraSoNguyenTo() {
+            if(n < 2){
+                a = false;
+            }else if(n >= 10000){
+                document.write('so nhap vao phai nho hon 10000');
+            }else{
+                for(i=2; i<n; i++){
+                    if(n %i == 0){
+                        a = false;
+                        break;
+                    }
+                }
+            }
+            if(n >= 10000){
+                alert('so nhap vao phai nho hon 10000');
+            }else if(a == true){
+                document.write(n + ' la so nt');
+            }else {
+                document.write(n + ' khong phai so nt');
+            }
+        }
+        kiemTraSoNguyenTo();
+    </script>
+</body>
+</html>
