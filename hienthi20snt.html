@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra 20 so ngyen to</title>
+</head>
+<body>
+    <script>
+        var number = parseInt(prompt('nhap vao so can in ra'));
+        var count = 0;
+        var n = 2;
+        function kiemTra(b) {
+            var ckeck =  true;
+            if(b<2){
+                ckeck = false;
+            }else{
+                for(i=2; i<b; i++){
+                    if(b %i === 0){
+                        ckeck = false;
+                        break;
+                    }
+                }
+            }
+            return ckeck;
+        }
+        while (count<number){
+            if(kiemTra(n)){
+                document.write(n + ' ');
+                count++;
+            }
+            n++;
+        }
+    </script>
+</body>
+</html>
